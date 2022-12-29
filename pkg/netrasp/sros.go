@@ -99,5 +99,5 @@ func (s sros) RunUntil(ctx context.Context, command string, prompt *regexp.Regex
 }
 
 func (s sros) basePrompt() *regexp.Regexp {
-	return regexp.MustCompile(`^[ABCD]:\S+@\S+#`)
+	return regexp.MustCompile(`^(\*)?[ABCD]:(\S+@)?[\S ]+#`)
 }
